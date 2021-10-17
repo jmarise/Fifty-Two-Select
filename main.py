@@ -1,6 +1,6 @@
 import random
 
-class luckOfTheDraw:
+class fiftyTwoSelect:
  
   def __init__(self):
     self.__deck = []
@@ -57,11 +57,11 @@ class luckOfTheDraw:
       
       elif sort[mid] > card:
         print(f"{sort[mid]}")
-        return luckOfTheDraw.binary_search(self,low, mid - 1, card)
+        return fiftyTwoSelect.binary_search(self,low, mid - 1, card)
       
       else:
         print(f"{sort[mid]}")
-        return luckOfTheDraw.binary_search(self, mid + 1, high, card)
+        return fiftyTwoSelect.binary_search(self, mid + 1, high, card)
       
     else: 
       return -1
@@ -71,15 +71,15 @@ class luckOfTheDraw:
     high = int(len(self.__deck))
 
 
-    return luckOfTheDraw.binary_search(self, low, high, card)
+    return fiftyTwoSelect.binary_search(self, low, high, card)
       
   def menu(self): 
-    luckOfTheDraw._init_deck(self)
+    fiftyTwoSelect._init_deck(self)
     userinput = input("Enter the card: ")
 
-    return luckOfTheDraw.val(self, userinput.upper())
+    return fiftyTwoSelect.val(self, userinput.upper())
 
 
-lotd = luckOfTheDraw()
+lotd = fiftyTwoSelect()
 answer = lotd.menu()
 print(f"{answer}")
